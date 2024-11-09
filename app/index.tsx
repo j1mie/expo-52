@@ -25,9 +25,22 @@ const styles = css.create({
     borderRadius: 5,
   },
   heading: {
+    fontFamily: 'GeistBold',
+  },
+  heading1: {
     fontSize: 24,
     marginBottom: 10,
-    fontFamily: 'GeistBold',
+  },
+  heading2: {
+    fontSize: 20,
+    marginBottom: 10,
+  },
+  heading3: {
+    fontSize: {
+      default: 16,
+      '@media (min-width: 701px)': 18,
+    },
+    marginBottom: 10,
   },
 })
 
@@ -36,7 +49,9 @@ export default function Index() {
 
   return (
     <html.main style={styles.container}>
-      <html.h1 style={styles.heading}>Hello world</html.h1>
+      <html.h1 style={[styles.heading, styles.heading1]}>Heading 1</html.h1>
+      <html.h2 style={[styles.heading, styles.heading2]}>Heading 2</html.h2>
+      <html.h3 style={[styles.heading, styles.heading3]}>Heading 3</html.h3>
 
       <html.button onClick={() => setShowModal(true)}>Click me</html.button>
 
