@@ -1,5 +1,6 @@
 import React from 'react'
 import { css, html } from 'react-strict-dom'
+import * as Font from 'expo-font'
 
 const styles = css.create({
   container: {
@@ -24,14 +25,23 @@ const styles = css.create({
     backgroundColor: 'white',
     borderRadius: 5,
   },
+  heading: {
+    fontSize: 24,
+    marginBottom: 10,
+    fontFamily: 'GeistBold',
+  },
 })
 
 export default function Index() {
   const [showModal, setShowModal] = React.useState(false)
 
+  const loadedFonts = Font.getLoadedFonts()
+
+  console.log(loadedFonts)
+
   return (
     <html.main style={styles.container}>
-      <html.h1>Hello world</html.h1>
+      <html.h1 style={styles.heading}>Hello world</html.h1>
 
       <html.button onClick={() => setShowModal(true)}>Click me</html.button>
 

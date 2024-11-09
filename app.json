@@ -23,7 +23,23 @@
       "favicon": "./assets/images/favicon.png"
     },
     "plugins": [
-      "expo-router"
+      "expo-router",
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "assets/fonts/Geist-Black.otf",
+            "assets/fonts/Geist-Bold.otf",
+            "assets/fonts/Geist-ExtraBold.otf",
+            "assets/fonts/Geist-ExtraLight.otf",
+            "assets/fonts/Geist-Light.otf",
+            "assets/fonts/Geist-Medium.otf",
+            "assets/fonts/Geist-Regular.otf",
+            "assets/fonts/Geist-SemiBold.otf",
+            "assets/fonts/Geist-Thin.otf"
+          ]
+        }
+      ]
     ],
     "experiments": {
       "typedRoutes": true
