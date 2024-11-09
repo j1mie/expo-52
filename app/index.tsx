@@ -1,6 +1,5 @@
 import React from 'react'
 import { css, html } from 'react-strict-dom'
-import * as Font from 'expo-font'
 
 const styles = css.create({
   container: {
@@ -34,10 +33,6 @@ const styles = css.create({
 
 export default function Index() {
   const [showModal, setShowModal] = React.useState(false)
-
-  const loadedFonts = Font.getLoadedFonts()
-
-  console.log(loadedFonts)
 
   return (
     <html.main style={styles.container}>
