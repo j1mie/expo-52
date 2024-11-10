@@ -1,6 +1,8 @@
 import React from 'react'
 import { css, html } from 'react-strict-dom'
 
+import { StyleProp, View, ViewStyle } from 'react-native'
+
 const styles = css.create({
   container: {
     flex: 1,
@@ -42,7 +44,12 @@ const styles = css.create({
     },
     marginBottom: 10,
   },
-})
+  box: {
+    width: 100,
+    height: 100,
+    backgroundColor: 'red',
+  },
+}) as StyleProp<any>
 
 export default function Index() {
   const [showModal, setShowModal] = React.useState(false)
@@ -52,6 +59,17 @@ export default function Index() {
       <html.h1 style={[styles.heading, styles.heading1]}>Heading 1</html.h1>
       <html.h2 style={[styles.heading, styles.heading2]}>Heading 2</html.h2>
       <html.h3 style={[styles.heading, styles.heading3]}>Heading 3</html.h3>
+
+      <html.form>
+        <html.input type='text' placeholder='Type something' />
+        <html.input type='number' placeholder='Type something' />
+        <html.input type='date' placeholder='Type something' />
+        <html.input type='checkbox' placeholder='Type something' />
+        <html.input type='radio' placeholder='Type something' />
+      </html.form>
+
+      {/** Example of passing styles to rnw components */}
+      <View style={styles.box} />
 
       <html.button onClick={() => setShowModal(true)}>Click me</html.button>
 
